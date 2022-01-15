@@ -1,11 +1,11 @@
 # EasyDaily
 用 pyautogui 写的 RPA 脚本
 
-Prerequisites:
+## Prerequisites:
 - python 3.5 以上版本
 - pyautogui, pandas 库  
 
-Userguide:
+## Userguide:
 - "img" 里要指定图像名称，多个图像请以 ","(注意英文半角) 分隔。当指定多个图像时，默认从前到后依次在屏幕上寻找，找到后即终止，进行后续操作。图像保存格式一律为 <font color='red'>PNG</font> 格式。
 - "no action" 相当于wait， 需要指定图像。当屏幕中出现图像时，"no action" 停止，进行后续操作。往往用来等待上一步操作后图像的出现。
 - "no action", "left click", "left double click", "right click", "input" 候选框中 "1" 代表执行操作，"0" 代表不执行，不选时默认为 "0" 。当选中多个操作时，默认先后顺序为：no action → left click → left double click → right click → input → keyboard_value。然而这样在很多时候操作没有意义，不建议同行指定多个非 "no action" 命令。
